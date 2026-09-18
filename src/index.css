@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --hud-white: #ffffff;
+    --hud-red: #ff0033;
+    --hud-dark-red: #880015;
+    --hud-gold: #ffd700;
+    --hud-amber: #ff9900;
+    --hud-black: #050203;
+    --panel-bg: rgba(10, 2, 4, 0.72);
+    --border-red: rgba(255, 0, 51, 0.45);
+    --border-gold: rgba(255, 215, 0, 0.45);
+    --glow-red: 0 0 15px rgba(255, 0, 51, 0.7);
+    --glow-gold: 0 0 15px rgba(255, 215, 0, 0.65);
+    --glow-white: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  body {
+    font-family: 'Michroma', 'Chakra Petch', system-ui, sans-serif;
+  }
+}
+
+@keyframes bootFlicker {
+  0% { opacity: 0.8; text-shadow: 0 0 10px #ff0033; }
+  100% { opacity: 1.0; text-shadow: 0 0 30px #ff0033, 0 0 10px #ffd700; }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blink-cursor::after {
+  content: ' _';
+  animation: blinkCursor 1s step-end infinite;
+}
+
+/* Custom Tactical Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: rgba(10, 2, 4, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #ff0033;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "JARVIS — Local AI Desktop Operating Assistant",
+  "description": "Futuristic local AI desktop operating assistant powered by Ollama qwen3:8b with voice command control, tool orchestration, Windows automation, and holographic HUD.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
